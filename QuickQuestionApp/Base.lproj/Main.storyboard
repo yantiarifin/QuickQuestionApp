@@ -3,9 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.ttf">
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+        </mutableArray>
         <mutableArray key="Lato-Light.ttf">
             <string>Lato-Light</string>
             <string>Lato-Light</string>
@@ -76,106 +79,9 @@
             <string>Montserrat-Regular</string>
             <string>Montserrat-Regular</string>
             <string>Montserrat-Regular</string>
-            <string>Montserrat-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--SignIn-->
-        <scene sceneID="5hZ-Tl-4tj">
-            <objects>
-                <viewController id="dwS-H2-Gmy" userLabel="SignIn" customClass="ViewController" customModule="QuickQuestionApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1zW-HD-hbu"/>
-                        <viewControllerLayoutGuide type="bottom" id="RtK-Ul-0c3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gMy-ev-WcC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-JS-sVO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMI-n6-bGF" userLabel="SignInBox" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
-                                <rect key="frame" x="32" y="225" width="310" height="216"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="socialButtonFB" translatesAutoresizingMaskIntoConstraints="NO" id="L8C-A1-Zl8">
-                                        <rect key="frame" x="0.0" y="0.0" width="310" height="48"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="socialButtonGL" translatesAutoresizingMaskIntoConstraints="NO" id="h63-Qk-BQt">
-                                        <rect key="frame" x="1" y="54" width="309" height="48"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="socialButtonTwt" translatesAutoresizingMaskIntoConstraints="NO" id="elr-Ff-c5E">
-                                        <rect key="frame" x="0.0" y="110" width="309" height="48"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="socialButtonLI" translatesAutoresizingMaskIntoConstraints="NO" id="nqT-Vr-z0z">
-                                        <rect key="frame" x="0.0" y="166" width="309" height="48"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="L8C-A1-Zl8" firstAttribute="top" secondItem="uMI-n6-bGF" secondAttribute="top" id="9Uk-Iv-bKq"/>
-                                    <constraint firstAttribute="height" constant="216" id="LqD-Qe-kl0"/>
-                                    <constraint firstAttribute="width" constant="310" id="MRJ-jp-J6s"/>
-                                    <constraint firstAttribute="trailing" secondItem="L8C-A1-Zl8" secondAttribute="trailing" id="MZm-Dw-POj"/>
-                                    <constraint firstItem="L8C-A1-Zl8" firstAttribute="leading" secondItem="uMI-n6-bGF" secondAttribute="leading" id="by6-dO-ckk"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInUp"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="QQ_icon" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-7V-L12">
-                                <rect key="frame" x="160" y="84" width="55" height="54"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzI-jX-mNg" customClass="SpringButton" customModule="QuickQuestionApp" customModuleProvider="target">
-                                <rect key="frame" x="136" y="471" width="102" height="32"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                <state key="normal" title="Skip for now">
-                                    <color key="titleColor" red="0.20392156859999999" green="0.63137254899999995" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ePq-JS-sVO" firstAttribute="leading" secondItem="gMy-ev-WcC" secondAttribute="leading" id="5DG-DR-0ra"/>
-                            <constraint firstItem="EOb-7V-L12" firstAttribute="top" secondItem="gMy-ev-WcC" secondAttribute="topMargin" constant="84" id="7Xc-BF-NXl"/>
-                            <constraint firstAttribute="trailing" secondItem="ePq-JS-sVO" secondAttribute="trailing" id="AiL-Pg-xLp"/>
-                            <constraint firstItem="ePq-JS-sVO" firstAttribute="top" secondItem="gMy-ev-WcC" secondAttribute="top" id="Y18-V6-xwJ"/>
-                            <constraint firstItem="EOb-7V-L12" firstAttribute="centerX" secondItem="gMy-ev-WcC" secondAttribute="centerX" id="cLR-Rq-qKA"/>
-                            <constraint firstItem="GzI-jX-mNg" firstAttribute="centerX" secondItem="gMy-ev-WcC" secondAttribute="centerX" id="iF3-fq-iLm"/>
-                            <constraint firstItem="uMI-n6-bGF" firstAttribute="centerY" secondItem="gMy-ev-WcC" secondAttribute="centerY" id="kos-Mp-j1I"/>
-                            <constraint firstItem="GzI-jX-mNg" firstAttribute="top" secondItem="uMI-n6-bGF" secondAttribute="bottom" constant="30" id="sPj-e7-2HR"/>
-                            <constraint firstItem="RtK-Ul-0c3" firstAttribute="top" secondItem="ePq-JS-sVO" secondAttribute="bottom" id="vfD-Mg-Ndm"/>
-                            <constraint firstItem="uMI-n6-bGF" firstAttribute="centerX" secondItem="gMy-ev-WcC" secondAttribute="centerX" id="z7K-Br-2gb"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BVb-uV-cHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2506.5" y="547.5"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="4tX-HX-wPe">
             <objects>
@@ -416,10 +322,11 @@
                             <constraint firstItem="4Si-Nz-rbP" firstAttribute="leading" secondItem="CyR-uW-Lio" secondAttribute="leading" id="zi3-6M-146"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6C-iS-ioX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-250.5" y="-313.5"/>
+            <point key="canvasLocation" x="-279.5" y="-313.5"/>
         </scene>
         <!--Menu-->
         <scene sceneID="6u3-06-TEk">
@@ -624,7 +531,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chR-aQ-Wlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="mD1-sh-eeU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="237.5" y="-313.5"/>
+            <point key="canvasLocation" x="332.5" y="-313.5"/>
         </scene>
         <!--Categories-->
         <scene sceneID="m3S-qX-1YG">
@@ -924,7 +831,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-jp-Grm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703.5" y="-313.5"/>
+            <point key="canvasLocation" x="925.5" y="-313.5"/>
         </scene>
         <!--Results-->
         <scene sceneID="ODD-pU-MIV">
@@ -1008,407 +915,6 @@
                                         <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMA-xa-tDs" userLabel="ResultsGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="139" width="311" height="369.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhk-ds-ca4">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="WUg-Kv-6aI"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invisibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQX-9B-qy6">
-                                                <rect key="frame" x="0.0" y="57" width="311" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="2O0-H0-ZH7"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkg-y7-74F">
-                                                <rect key="frame" x="0.0" y="114" width="311" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dCP-zj-ikQ"/>
-                                                    <constraint firstAttribute="height" constant="20" id="sy5-6q-0Uh"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teleportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl7-79-fTj">
-                                                <rect key="frame" x="0.0" y="171" width="311" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="aEg-eX-xqB"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAQ-TT-e1B" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                <rect key="frame" x="-33" y="22" width="377" height="20"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-Cl-04w" userLabel="male">
-                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uw-Mj-Piy" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="48w-by-qgI"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="2Uw-Mj-Piy" firstAttribute="top" secondItem="hcd-Cl-04w" secondAttribute="top" id="GtJ-ar-T6e"/>
-                                                            <constraint firstAttribute="width" constant="265" id="HXO-8q-egG"/>
-                                                            <constraint firstAttribute="bottom" secondItem="2Uw-Mj-Piy" secondAttribute="bottom" id="hoS-fn-gVu"/>
-                                                            <constraint firstItem="2Uw-Mj-Piy" firstAttribute="leading" secondItem="hcd-Cl-04w" secondAttribute="leading" constant="40" id="xVQ-2q-JGz"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-m6-pRi" userLabel="female">
-                                                        <rect key="frame" x="265" y="0.0" width="112" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-0C-9SJ" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="12" y="0.0" width="20" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="PIC-QC-RMU"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="VFG-0C-9SJ" firstAttribute="leading" secondItem="uBk-m6-pRi" secondAttribute="leading" constant="12" id="BKr-yV-ClD"/>
-                                                            <constraint firstAttribute="bottom" secondItem="VFG-0C-9SJ" secondAttribute="bottom" constant="-1.5" id="h6C-Qh-VS0"/>
-                                                            <constraint firstItem="VFG-0C-9SJ" firstAttribute="top" secondItem="uBk-m6-pRi" secondAttribute="top" id="nvv-J2-07r"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="hcd-Cl-04w" secondAttribute="bottom" id="4YQ-MY-fuJ"/>
-                                                    <constraint firstItem="uBk-m6-pRi" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="top" id="BlQ-yd-k7U"/>
-                                                    <constraint firstItem="uBk-m6-pRi" firstAttribute="leading" secondItem="hcd-Cl-04w" secondAttribute="trailing" id="KeN-wt-xY4"/>
-                                                    <constraint firstItem="hcd-Cl-04w" firstAttribute="leading" secondItem="sAQ-TT-e1B" secondAttribute="leading" id="WcJ-fA-dcT"/>
-                                                    <constraint firstAttribute="height" constant="20" id="b8y-FY-PA2"/>
-                                                    <constraint firstItem="hcd-Cl-04w" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="top" id="fIq-su-4du"/>
-                                                    <constraint firstAttribute="bottom" secondItem="uBk-m6-pRi" secondAttribute="bottom" id="s3y-nv-PO7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="uBk-m6-pRi" secondAttribute="trailing" id="w2f-bd-h0t"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-BI-Ir0" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                <rect key="frame" x="-33" y="79" width="377" height="20"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szs-Bd-Dcp" userLabel="male">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-IM-KDX" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="1Xb-wd-lbO"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="jZa-IM-KDX" firstAttribute="top" secondItem="Szs-Bd-Dcp" secondAttribute="top" id="0ec-4K-1mD"/>
-                                                            <constraint firstItem="jZa-IM-KDX" firstAttribute="leading" secondItem="Szs-Bd-Dcp" secondAttribute="leading" constant="40" id="73q-k4-Aay"/>
-                                                            <constraint firstAttribute="width" constant="100" id="DfP-xT-ogS"/>
-                                                            <constraint firstAttribute="bottom" secondItem="jZa-IM-KDX" secondAttribute="bottom" id="MzJ-0K-csv"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-6e-LbT" userLabel="female">
-                                                        <rect key="frame" x="100" y="0.0" width="277" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELU-IF-3lz" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="12" y="0.0" width="20" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="mOU-c2-dpW"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="ELU-IF-3lz" firstAttribute="top" secondItem="Vf4-6e-LbT" secondAttribute="top" id="YSm-Sm-Kgz"/>
-                                                            <constraint firstItem="ELU-IF-3lz" firstAttribute="leading" secondItem="Vf4-6e-LbT" secondAttribute="leading" constant="12" id="dDg-PB-gCm"/>
-                                                            <constraint firstAttribute="bottom" secondItem="ELU-IF-3lz" secondAttribute="bottom" constant="-1.5" id="sTU-k5-Env"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="Szs-Bd-Dcp" secondAttribute="bottom" id="2Y4-UW-d2l"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Vf4-6e-LbT" secondAttribute="trailing" id="7zS-W5-YBB"/>
-                                                    <constraint firstItem="Vf4-6e-LbT" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="top" id="8lA-bt-VCh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Vf4-6e-LbT" secondAttribute="bottom" id="TcU-TN-Djd"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="WJ6-f7-h6o"/>
-                                                    <constraint firstAttribute="height" constant="20" id="dgl-xX-GGw"/>
-                                                    <constraint firstItem="Vf4-6e-LbT" firstAttribute="leading" secondItem="Szs-Bd-Dcp" secondAttribute="trailing" id="rcq-Vt-XBb"/>
-                                                    <constraint firstItem="Szs-Bd-Dcp" firstAttribute="leading" secondItem="QQX-BI-Ir0" secondAttribute="leading" id="z2z-Ge-qbw"/>
-                                                    <constraint firstItem="Szs-Bd-Dcp" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="top" id="zRI-1x-lOK"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAz-Oa-UE1" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                <rect key="frame" x="-33" y="136" width="377" height="20"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iD3-eX-D5F" userLabel="male">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-EZ-B8b" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="Sa3-j7-khw"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="v8c-EZ-B8b" secondAttribute="bottom" id="HF7-TO-u36"/>
-                                                            <constraint firstItem="v8c-EZ-B8b" firstAttribute="top" secondItem="iD3-eX-D5F" secondAttribute="top" id="Lxa-Gg-FoJ"/>
-                                                            <constraint firstAttribute="width" constant="320" id="gow-23-k7J"/>
-                                                            <constraint firstItem="v8c-EZ-B8b" firstAttribute="leading" secondItem="iD3-eX-D5F" secondAttribute="leading" constant="40" id="iMO-b1-7Og"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAD-7Y-J21" userLabel="female">
-                                                        <rect key="frame" x="320" y="0.0" width="57" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-3i-WvT" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="12" y="0.0" width="20" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="PgF-Vi-QD6"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="FXE-3i-WvT" firstAttribute="leading" secondItem="TAD-7Y-J21" secondAttribute="leading" constant="12" id="RZS-X6-q5a"/>
-                                                            <constraint firstAttribute="bottom" secondItem="FXE-3i-WvT" secondAttribute="bottom" constant="-1.5" id="VpF-lg-48B"/>
-                                                            <constraint firstItem="FXE-3i-WvT" firstAttribute="top" secondItem="TAD-7Y-J21" secondAttribute="top" id="lxv-mw-aX2"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="TAD-7Y-J21" firstAttribute="leading" secondItem="iD3-eX-D5F" secondAttribute="trailing" id="71C-Ng-MeV"/>
-                                                    <constraint firstItem="TAD-7Y-J21" firstAttribute="top" secondItem="OAz-Oa-UE1" secondAttribute="top" id="DsG-Z3-2t5"/>
-                                                    <constraint firstAttribute="bottom" secondItem="iD3-eX-D5F" secondAttribute="bottom" id="PPS-Cd-dHT"/>
-                                                    <constraint firstAttribute="bottom" secondItem="TAD-7Y-J21" secondAttribute="bottom" id="XfW-SM-pCs"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="edR-pg-81B"/>
-                                                    <constraint firstItem="iD3-eX-D5F" firstAttribute="leading" secondItem="OAz-Oa-UE1" secondAttribute="leading" id="fsM-oq-IUL"/>
-                                                    <constraint firstItem="iD3-eX-D5F" firstAttribute="top" secondItem="OAz-Oa-UE1" secondAttribute="top" id="n0g-4x-TLo"/>
-                                                    <constraint firstAttribute="height" constant="20" id="qlQ-I3-Fif"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TAD-7Y-J21" secondAttribute="trailing" id="r7l-MT-wpE"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxc-aR-2Fu" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                <rect key="frame" x="-33" y="193" width="377" height="20"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-dr-fX0" userLabel="male">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-tf-ftO" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="uKr-zz-P4a"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="200" id="Mv9-Al-lrP"/>
-                                                            <constraint firstItem="jJg-tf-ftO" firstAttribute="leading" secondItem="dK3-dr-fX0" secondAttribute="leading" constant="40" id="NQI-OU-3KG"/>
-                                                            <constraint firstItem="jJg-tf-ftO" firstAttribute="top" secondItem="dK3-dr-fX0" secondAttribute="top" id="TXf-sp-SMo"/>
-                                                            <constraint firstAttribute="bottom" secondItem="jJg-tf-ftO" secondAttribute="bottom" id="izE-QP-HDV"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SD0-KI-MAz" userLabel="female">
-                                                        <rect key="frame" x="200" y="0.0" width="177" height="20"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-LP-2B1" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
-                                                                <rect key="frame" x="12" y="0.0" width="20" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="nnv-3v-739"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="VV2-LP-2B1" secondAttribute="bottom" constant="-1.5" id="SKr-YQ-XU8"/>
-                                                            <constraint firstItem="VV2-LP-2B1" firstAttribute="top" secondItem="SD0-KI-MAz" secondAttribute="top" id="Szm-BX-VJk"/>
-                                                            <constraint firstItem="VV2-LP-2B1" firstAttribute="leading" secondItem="SD0-KI-MAz" secondAttribute="leading" constant="12" id="zcX-Yu-eNF"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="SD0-KI-MAz" secondAttribute="trailing" id="152-WC-Kfd"/>
-                                                    <constraint firstItem="SD0-KI-MAz" firstAttribute="leading" secondItem="dK3-dr-fX0" secondAttribute="trailing" id="9PW-Cs-2GA"/>
-                                                    <constraint firstAttribute="bottom" secondItem="SD0-KI-MAz" secondAttribute="bottom" id="EdN-Qm-gpa"/>
-                                                    <constraint firstAttribute="bottom" secondItem="dK3-dr-fX0" secondAttribute="bottom" id="FWO-0I-uua"/>
-                                                    <constraint firstItem="dK3-dr-fX0" firstAttribute="leading" secondItem="bxc-aR-2Fu" secondAttribute="leading" id="XQa-sd-G15"/>
-                                                    <constraint firstItem="dK3-dr-fX0" firstAttribute="top" secondItem="bxc-aR-2Fu" secondAttribute="top" id="ZyI-If-L25"/>
-                                                    <constraint firstItem="SD0-KI-MAz" firstAttribute="top" secondItem="bxc-aR-2Fu" secondAttribute="top" id="fng-3I-70J"/>
-                                                    <constraint firstAttribute="height" constant="20" id="h41-N7-Y5x"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="Qhk-ds-ca4" firstAttribute="top" secondItem="hMA-xa-tDs" secondAttribute="top" id="10x-kZ-ERZ"/>
-                                            <constraint firstItem="Mkg-y7-74F" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="bottom" constant="15" id="56R-QP-w0j"/>
-                                            <constraint firstAttribute="trailing" secondItem="OAz-Oa-UE1" secondAttribute="trailing" constant="-33" id="6sa-wY-lnj"/>
-                                            <constraint firstAttribute="trailing" secondItem="QQX-BI-Ir0" secondAttribute="trailing" constant="-33" id="AKm-0B-eNH"/>
-                                            <constraint firstItem="bl7-79-fTj" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="Aai-3z-Gk7"/>
-                                            <constraint firstAttribute="trailing" secondItem="bxc-aR-2Fu" secondAttribute="trailing" constant="-33" id="C9n-Mv-yd2"/>
-                                            <constraint firstItem="jQX-9B-qy6" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="bottom" constant="15" id="Dwa-UG-Zbg"/>
-                                            <constraint firstItem="QQX-BI-Ir0" firstAttribute="top" secondItem="jQX-9B-qy6" secondAttribute="bottom" constant="2" id="Eqx-d5-SAU"/>
-                                            <constraint firstItem="jQX-9B-qy6" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="bottom" constant="15" id="FvX-Pd-9mx"/>
-                                            <constraint firstItem="Mkg-y7-74F" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="bottom" constant="15" id="GHy-Xt-8NY"/>
-                                            <constraint firstItem="OAz-Oa-UE1" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="HaF-tp-v5I"/>
-                                            <constraint firstItem="sAQ-TT-e1B" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="IUc-p2-RGd"/>
-                                            <constraint firstItem="OAz-Oa-UE1" firstAttribute="top" secondItem="Mkg-y7-74F" secondAttribute="bottom" constant="2" id="Ogf-l4-Udl"/>
-                                            <constraint firstAttribute="trailing" secondItem="Mkg-y7-74F" secondAttribute="trailing" id="Q2C-Ae-u5t"/>
-                                            <constraint firstItem="jQX-9B-qy6" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="RgH-G9-9P6"/>
-                                            <constraint firstItem="bl7-79-fTj" firstAttribute="top" secondItem="OAz-Oa-UE1" secondAttribute="bottom" constant="15" id="T0j-QQ-DyR"/>
-                                            <constraint firstItem="QQX-BI-Ir0" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="TaI-Mq-oiM"/>
-                                            <constraint firstItem="bxc-aR-2Fu" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="TiN-Kl-2hs"/>
-                                            <constraint firstItem="Qhk-ds-ca4" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="UZP-Yl-4TL"/>
-                                            <constraint firstItem="sAQ-TT-e1B" firstAttribute="top" secondItem="Qhk-ds-ca4" secondAttribute="bottom" constant="2" id="X9f-ng-Qk9"/>
-                                            <constraint firstAttribute="trailing" secondItem="bl7-79-fTj" secondAttribute="trailing" id="XZW-Pb-lN2"/>
-                                            <constraint firstAttribute="trailing" secondItem="jQX-9B-qy6" secondAttribute="trailing" id="dZU-PX-XOe"/>
-                                            <constraint firstAttribute="trailing" secondItem="Qhk-ds-ca4" secondAttribute="trailing" id="efK-UT-u38"/>
-                                            <constraint firstItem="bxc-aR-2Fu" firstAttribute="top" secondItem="bl7-79-fTj" secondAttribute="bottom" constant="2" id="mWc-BG-lGv"/>
-                                            <constraint firstItem="Mkg-y7-74F" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="oI1-xg-r8U"/>
-                                            <constraint firstAttribute="trailing" secondItem="sAQ-TT-e1B" secondAttribute="trailing" constant="-33" id="pX5-jI-BuT"/>
-                                            <constraint firstItem="QQX-BI-Ir0" firstAttribute="top" secondItem="jQX-9B-qy6" secondAttribute="bottom" constant="2" id="r7c-6H-pBX"/>
-                                            <constraint firstItem="OAz-Oa-UE1" firstAttribute="top" secondItem="Mkg-y7-74F" secondAttribute="bottom" constant="2" id="uW6-uM-H8m"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="FvX-Pd-9mx"/>
-                                                <exclude reference="r7c-6H-pBX"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBF-pl-dqY" userLabel="Results">
                                         <rect key="frame" x="20" y="139" width="311" height="370"/>
                                         <subviews>
@@ -1440,6 +946,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aas-Sf-Suz" userLabel="resultBar" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1466,6 +973,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p0G-KY-Onh" userLabel="resultBar" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1492,6 +1000,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0z-Cy-0T3" userLabel="resultBar" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1518,6 +1027,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Super Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-1p-A4k">
@@ -1641,18 +1151,14 @@
                                     <constraint firstAttribute="trailing" secondItem="YF6-ja-32R" secondAttribute="trailing" constant="20" id="1Vo-jd-XB4"/>
                                     <constraint firstItem="LBF-pl-dqY" firstAttribute="top" secondItem="YF6-ja-32R" secondAttribute="bottom" constant="20" id="2I4-A7-KE5"/>
                                     <constraint firstItem="YF6-ja-32R" firstAttribute="leading" secondItem="dFq-2n-DC7" secondAttribute="leading" constant="20" id="4CE-lc-lpu"/>
-                                    <constraint firstAttribute="trailing" secondItem="hMA-xa-tDs" secondAttribute="trailing" constant="20" id="5y7-9C-pgR"/>
                                     <constraint firstAttribute="bottom" secondItem="OKm-gh-N3q" secondAttribute="bottom" id="8Bt-I3-L8c"/>
                                     <constraint firstItem="9iX-K9-hvC" firstAttribute="leading" secondItem="dFq-2n-DC7" secondAttribute="leading" id="Not-QF-mep"/>
                                     <constraint firstItem="YF6-ja-32R" firstAttribute="top" secondItem="9iX-K9-hvC" secondAttribute="bottom" constant="20" id="Xa0-ZC-iTm"/>
                                     <constraint firstAttribute="trailing" secondItem="OKm-gh-N3q" secondAttribute="trailing" id="XgF-UO-fH3"/>
                                     <constraint firstItem="LBF-pl-dqY" firstAttribute="leading" secondItem="dFq-2n-DC7" secondAttribute="leading" constant="20" id="aG3-zc-RPp"/>
-                                    <constraint firstItem="hMA-xa-tDs" firstAttribute="top" secondItem="YF6-ja-32R" secondAttribute="bottom" constant="20" id="gwg-fv-7CG"/>
                                     <constraint firstItem="OKm-gh-N3q" firstAttribute="top" secondItem="LBF-pl-dqY" secondAttribute="bottom" constant="10" id="iqb-qG-8f7"/>
                                     <constraint firstAttribute="trailing" secondItem="9iX-K9-hvC" secondAttribute="trailing" id="p2z-MU-5hv"/>
                                     <constraint firstItem="9iX-K9-hvC" firstAttribute="top" secondItem="dFq-2n-DC7" secondAttribute="top" id="re6-FQ-vf9"/>
-                                    <constraint firstItem="hMA-xa-tDs" firstAttribute="leading" secondItem="dFq-2n-DC7" secondAttribute="leading" constant="20" id="rx1-PR-CYG"/>
-                                    <constraint firstItem="OKm-gh-N3q" firstAttribute="top" secondItem="hMA-xa-tDs" secondAttribute="bottom" constant="10" id="sUn-st-Pgo"/>
                                     <constraint firstAttribute="trailing" secondItem="LBF-pl-dqY" secondAttribute="trailing" constant="20" id="vhG-SP-dbA"/>
                                     <constraint firstItem="OKm-gh-N3q" firstAttribute="leading" secondItem="dFq-2n-DC7" secondAttribute="leading" id="xhW-RM-a9f"/>
                                 </constraints>
@@ -1777,7 +1283,7 @@
                                                 </state>
                                                 <state key="focused" backgroundImage="AnswerButtonSelected"/>
                                                 <connections>
-                                                    <action selector="AnswerButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amU-jD-1SW"/>
+                                                    <action selector="Answer1ButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqn-gn-Ozn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9V-TT-dpY" userLabel="AnswerButton" customClass="DesignableButton" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1797,7 +1303,7 @@
                                                 </state>
                                                 <state key="focused" backgroundImage="AnswerButtonSelected"/>
                                                 <connections>
-                                                    <action selector="AnswerButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPP-Wo-hhG"/>
+                                                    <action selector="Answer2ButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frK-xb-24Y"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkQ-SZ-1ff" userLabel="AnswerButton" customClass="DesignableButton" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1817,7 +1323,7 @@
                                                 </state>
                                                 <state key="focused" backgroundImage="AnswerButtonSelected"/>
                                                 <connections>
-                                                    <action selector="AnswerButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwd-HW-4sd"/>
+                                                    <action selector="Answer3DidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDB-Ai-h5c"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-q7-Gx3" userLabel="AnswerButton" customClass="DesignableButton" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1838,7 +1344,7 @@
                                                 </state>
                                                 <state key="focused" backgroundImage="AnswerButtonSelected"/>
                                                 <connections>
-                                                    <action selector="AnswerButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFL-Kj-GlB"/>
+                                                    <action selector="Answer4DidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqx-Iy-SWF"/>
                                                 </connections>
                                             </button>
                                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5Q-2U-7PL" userLabel="FaveAlert" customClass="DesignableView" customModule="QuickQuestionApp" customModuleProvider="target">
@@ -1875,6 +1381,8 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                         <real key="value" value="0.29999999999999999"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -2036,16 +1544,21 @@
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="Answer1Button" destination="prb-sH-0BD" id="WDJ-uz-PHR"/>
+                        <outlet property="Answer2Button" destination="J9V-TT-dpY" id="74V-nC-zLb"/>
+                        <outlet property="Answer3Button" destination="vkQ-SZ-1ff" id="xpm-Ef-KOM"/>
+                        <outlet property="Answer4Button" destination="rIK-q7-Gx3" id="FMc-hF-wm0"/>
                         <outlet property="AnswersView" destination="Chh-DN-8wG" id="RGB-b5-VER"/>
                         <outlet property="FaveAlertView" destination="h5Q-2U-7PL" id="usv-53-KAo"/>
                         <outlet property="PollCardView" destination="UYN-E6-N29" id="2zA-5R-wpB"/>
                         <outlet property="ProfileBarView" destination="1hY-7D-NQi" id="5KQ-8H-fIA"/>
                         <outlet property="QuestionLabel" destination="9uV-Y4-Si9" id="2yV-WU-sY0"/>
+                        <outlet property="SubmitAnswerButton" destination="VQ7-a6-iwj" id="Ss3-zq-mRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215.5" y="533.5"/>
+            <point key="canvasLocation" x="-173.5" y="533.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ulJ-YX-5kq">
@@ -2137,12 +1650,441 @@
                                                     <color key="titleColor" red="0.66274511810000003" green="0.70980393890000004" blue="0.71372550729999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMA-xa-tDs" userLabel="ResultsGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="140" width="311" height="368"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhk-ds-ca4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="WUg-Kv-6aI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                        <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invisibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQX-9B-qy6">
+                                                        <rect key="frame" x="0.0" y="57" width="311" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="2O0-H0-ZH7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                        <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkg-y7-74F">
+                                                        <rect key="frame" x="0.0" y="114" width="311" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dCP-zj-ikQ"/>
+                                                            <constraint firstAttribute="height" constant="20" id="sy5-6q-0Uh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                        <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teleportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl7-79-fTj">
+                                                        <rect key="frame" x="0.0" y="171" width="311" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="aEg-eX-xqB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                        <color key="textColor" red="0.2941176593" green="0.33333334329999997" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAQ-TT-e1B" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                        <rect key="frame" x="-33" y="22" width="377" height="20"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-Cl-04w" userLabel="male">
+                                                                <rect key="frame" x="0.0" y="0.0" width="265" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uw-Mj-Piy" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="48w-by-qgI"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="2Uw-Mj-Piy" firstAttribute="top" secondItem="hcd-Cl-04w" secondAttribute="top" id="GtJ-ar-T6e"/>
+                                                                    <constraint firstAttribute="width" constant="265" id="HXO-8q-egG"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="2Uw-Mj-Piy" secondAttribute="bottom" id="hoS-fn-gVu"/>
+                                                                    <constraint firstItem="2Uw-Mj-Piy" firstAttribute="leading" secondItem="hcd-Cl-04w" secondAttribute="leading" constant="40" id="xVQ-2q-JGz"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-m6-pRi" userLabel="female">
+                                                                <rect key="frame" x="265" y="0.0" width="112" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-0C-9SJ" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="0.0" width="20" height="21"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="PIC-QC-RMU"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="VFG-0C-9SJ" firstAttribute="leading" secondItem="uBk-m6-pRi" secondAttribute="leading" constant="12" id="BKr-yV-ClD"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="VFG-0C-9SJ" secondAttribute="bottom" constant="-1.5" id="h6C-Qh-VS0"/>
+                                                                    <constraint firstItem="VFG-0C-9SJ" firstAttribute="top" secondItem="uBk-m6-pRi" secondAttribute="top" id="nvv-J2-07r"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="hcd-Cl-04w" secondAttribute="bottom" id="4YQ-MY-fuJ"/>
+                                                            <constraint firstItem="uBk-m6-pRi" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="top" id="BlQ-yd-k7U"/>
+                                                            <constraint firstItem="uBk-m6-pRi" firstAttribute="leading" secondItem="hcd-Cl-04w" secondAttribute="trailing" id="KeN-wt-xY4"/>
+                                                            <constraint firstItem="hcd-Cl-04w" firstAttribute="leading" secondItem="sAQ-TT-e1B" secondAttribute="leading" id="WcJ-fA-dcT"/>
+                                                            <constraint firstAttribute="height" constant="20" id="b8y-FY-PA2"/>
+                                                            <constraint firstItem="hcd-Cl-04w" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="top" id="fIq-su-4du"/>
+                                                            <constraint firstAttribute="bottom" secondItem="uBk-m6-pRi" secondAttribute="bottom" id="s3y-nv-PO7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uBk-m6-pRi" secondAttribute="trailing" id="w2f-bd-h0t"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-BI-Ir0" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                        <rect key="frame" x="-33" y="79" width="377" height="20"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szs-Bd-Dcp" userLabel="male">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-IM-KDX" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="1Xb-wd-lbO"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="jZa-IM-KDX" firstAttribute="top" secondItem="Szs-Bd-Dcp" secondAttribute="top" id="0ec-4K-1mD"/>
+                                                                    <constraint firstItem="jZa-IM-KDX" firstAttribute="leading" secondItem="Szs-Bd-Dcp" secondAttribute="leading" constant="40" id="73q-k4-Aay"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="DfP-xT-ogS"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="jZa-IM-KDX" secondAttribute="bottom" id="MzJ-0K-csv"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-6e-LbT" userLabel="female">
+                                                                <rect key="frame" x="100" y="0.0" width="277" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELU-IF-3lz" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="0.0" width="20" height="21"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="mOU-c2-dpW"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="ELU-IF-3lz" firstAttribute="top" secondItem="Vf4-6e-LbT" secondAttribute="top" id="YSm-Sm-Kgz"/>
+                                                                    <constraint firstItem="ELU-IF-3lz" firstAttribute="leading" secondItem="Vf4-6e-LbT" secondAttribute="leading" constant="12" id="dDg-PB-gCm"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ELU-IF-3lz" secondAttribute="bottom" constant="-1.5" id="sTU-k5-Env"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Szs-Bd-Dcp" secondAttribute="bottom" id="2Y4-UW-d2l"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Vf4-6e-LbT" secondAttribute="trailing" id="7zS-W5-YBB"/>
+                                                            <constraint firstItem="Vf4-6e-LbT" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="top" id="8lA-bt-VCh"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Vf4-6e-LbT" secondAttribute="bottom" id="TcU-TN-Djd"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="WJ6-f7-h6o"/>
+                                                            <constraint firstAttribute="height" constant="20" id="dgl-xX-GGw"/>
+                                                            <constraint firstItem="Vf4-6e-LbT" firstAttribute="leading" secondItem="Szs-Bd-Dcp" secondAttribute="trailing" id="rcq-Vt-XBb"/>
+                                                            <constraint firstItem="Szs-Bd-Dcp" firstAttribute="leading" secondItem="QQX-BI-Ir0" secondAttribute="leading" id="z2z-Ge-qbw"/>
+                                                            <constraint firstItem="Szs-Bd-Dcp" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="top" id="zRI-1x-lOK"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAz-Oa-UE1" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                        <rect key="frame" x="-33" y="136" width="377" height="20"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iD3-eX-D5F" userLabel="male">
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-EZ-B8b" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="Sa3-j7-khw"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="v8c-EZ-B8b" secondAttribute="bottom" id="HF7-TO-u36"/>
+                                                                    <constraint firstItem="v8c-EZ-B8b" firstAttribute="top" secondItem="iD3-eX-D5F" secondAttribute="top" id="Lxa-Gg-FoJ"/>
+                                                                    <constraint firstAttribute="width" constant="320" id="gow-23-k7J"/>
+                                                                    <constraint firstItem="v8c-EZ-B8b" firstAttribute="leading" secondItem="iD3-eX-D5F" secondAttribute="leading" constant="40" id="iMO-b1-7Og"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAD-7Y-J21" userLabel="female">
+                                                                <rect key="frame" x="320" y="0.0" width="57" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-3i-WvT" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="0.0" width="20" height="21"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="PgF-Vi-QD6"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="FXE-3i-WvT" firstAttribute="leading" secondItem="TAD-7Y-J21" secondAttribute="leading" constant="12" id="RZS-X6-q5a"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="FXE-3i-WvT" secondAttribute="bottom" constant="-1.5" id="VpF-lg-48B"/>
+                                                                    <constraint firstItem="FXE-3i-WvT" firstAttribute="top" secondItem="TAD-7Y-J21" secondAttribute="top" id="lxv-mw-aX2"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="TAD-7Y-J21" firstAttribute="leading" secondItem="iD3-eX-D5F" secondAttribute="trailing" id="71C-Ng-MeV"/>
+                                                            <constraint firstItem="TAD-7Y-J21" firstAttribute="top" secondItem="OAz-Oa-UE1" secondAttribute="top" id="DsG-Z3-2t5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="iD3-eX-D5F" secondAttribute="bottom" id="PPS-Cd-dHT"/>
+                                                            <constraint firstAttribute="bottom" secondItem="TAD-7Y-J21" secondAttribute="bottom" id="XfW-SM-pCs"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="edR-pg-81B"/>
+                                                            <constraint firstItem="iD3-eX-D5F" firstAttribute="leading" secondItem="OAz-Oa-UE1" secondAttribute="leading" id="fsM-oq-IUL"/>
+                                                            <constraint firstItem="iD3-eX-D5F" firstAttribute="top" secondItem="OAz-Oa-UE1" secondAttribute="top" id="n0g-4x-TLo"/>
+                                                            <constraint firstAttribute="height" constant="20" id="qlQ-I3-Fif"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TAD-7Y-J21" secondAttribute="trailing" id="r7l-MT-wpE"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxc-aR-2Fu" userLabel="resultBarGender" customClass="SpringView" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                        <rect key="frame" x="-33" y="193" width="377" height="20"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-dr-fX0" userLabel="male">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-tf-ftO" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="40" y="0.0" width="20" height="19.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="uKr-zz-P4a"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.2039215714" green="0.63137257099999999" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="200" id="Mv9-Al-lrP"/>
+                                                                    <constraint firstItem="jJg-tf-ftO" firstAttribute="leading" secondItem="dK3-dr-fX0" secondAttribute="leading" constant="40" id="NQI-OU-3KG"/>
+                                                                    <constraint firstItem="jJg-tf-ftO" firstAttribute="top" secondItem="dK3-dr-fX0" secondAttribute="top" id="TXf-sp-SMo"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="jJg-tf-ftO" secondAttribute="bottom" id="izE-QP-HDV"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SD0-KI-MAz" userLabel="female">
+                                                                <rect key="frame" x="200" y="0.0" width="177" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-LP-2B1" userLabel="resultBarNum" customClass="SpringLabel" customModule="QuickQuestionApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="0.0" width="20" height="21"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="nnv-3v-739"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="VV2-LP-2B1" secondAttribute="bottom" constant="-1.5" id="SKr-YQ-XU8"/>
+                                                                    <constraint firstItem="VV2-LP-2B1" firstAttribute="top" secondItem="SD0-KI-MAz" secondAttribute="top" id="Szm-BX-VJk"/>
+                                                                    <constraint firstItem="VV2-LP-2B1" firstAttribute="leading" secondItem="SD0-KI-MAz" secondAttribute="leading" constant="12" id="zcX-Yu-eNF"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="SD0-KI-MAz" secondAttribute="trailing" id="152-WC-Kfd"/>
+                                                            <constraint firstItem="SD0-KI-MAz" firstAttribute="leading" secondItem="dK3-dr-fX0" secondAttribute="trailing" id="9PW-Cs-2GA"/>
+                                                            <constraint firstAttribute="bottom" secondItem="SD0-KI-MAz" secondAttribute="bottom" id="EdN-Qm-gpa"/>
+                                                            <constraint firstAttribute="bottom" secondItem="dK3-dr-fX0" secondAttribute="bottom" id="FWO-0I-uua"/>
+                                                            <constraint firstItem="dK3-dr-fX0" firstAttribute="leading" secondItem="bxc-aR-2Fu" secondAttribute="leading" id="XQa-sd-G15"/>
+                                                            <constraint firstItem="dK3-dr-fX0" firstAttribute="top" secondItem="bxc-aR-2Fu" secondAttribute="top" id="ZyI-If-L25"/>
+                                                            <constraint firstItem="SD0-KI-MAz" firstAttribute="top" secondItem="bxc-aR-2Fu" secondAttribute="top" id="fng-3I-70J"/>
+                                                            <constraint firstAttribute="height" constant="20" id="h41-N7-Y5x"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-yn-yUY" userLabel="iconFemale">
+                                                        <rect key="frame" x="285" y="223" width="26" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="26" id="GFG-iQ-zbw"/>
+                                                            <constraint firstAttribute="height" constant="50" id="Us3-h5-OSO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="28"/>
+                                                        <color key="textColor" red="0.96470588239999999" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8R-5s-FX8" userLabel="iconMale">
+                                                        <rect key="frame" x="0.0" y="223" width="26" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="61y-GV-Vck"/>
+                                                            <constraint firstAttribute="width" constant="26" id="WnJ-RC-1qf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="28"/>
+                                                        <color key="textColor" red="0.20392157137393951" green="0.63137257099151611" blue="0.81960785388946533" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Qhk-ds-ca4" firstAttribute="top" secondItem="hMA-xa-tDs" secondAttribute="top" id="10x-kZ-ERZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lyf-yn-yUY" secondAttribute="trailing" id="2q4-LF-PNR"/>
+                                                    <constraint firstItem="Mkg-y7-74F" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="bottom" constant="15" id="56R-QP-w0j"/>
+                                                    <constraint firstItem="X8R-5s-FX8" firstAttribute="top" secondItem="bxc-aR-2Fu" secondAttribute="bottom" constant="10" id="6cd-xu-2Zl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OAz-Oa-UE1" secondAttribute="trailing" constant="-33" id="6sa-wY-lnj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QQX-BI-Ir0" secondAttribute="trailing" constant="-33" id="AKm-0B-eNH"/>
+                                                    <constraint firstItem="bl7-79-fTj" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="Aai-3z-Gk7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bxc-aR-2Fu" secondAttribute="trailing" constant="-33" id="C9n-Mv-yd2"/>
+                                                    <constraint firstItem="jQX-9B-qy6" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="bottom" constant="15" id="Dwa-UG-Zbg"/>
+                                                    <constraint firstItem="QQX-BI-Ir0" firstAttribute="top" secondItem="jQX-9B-qy6" secondAttribute="bottom" constant="2" id="Eqx-d5-SAU"/>
+                                                    <constraint firstItem="jQX-9B-qy6" firstAttribute="top" secondItem="sAQ-TT-e1B" secondAttribute="bottom" constant="15" id="FvX-Pd-9mx"/>
+                                                    <constraint firstItem="Mkg-y7-74F" firstAttribute="top" secondItem="QQX-BI-Ir0" secondAttribute="bottom" constant="15" id="GHy-Xt-8NY"/>
+                                                    <constraint firstItem="OAz-Oa-UE1" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="HaF-tp-v5I"/>
+                                                    <constraint firstItem="sAQ-TT-e1B" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="IUc-p2-RGd"/>
+                                                    <constraint firstItem="X8R-5s-FX8" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="KYh-Nu-NOL"/>
+                                                    <constraint firstItem="OAz-Oa-UE1" firstAttribute="top" secondItem="Mkg-y7-74F" secondAttribute="bottom" constant="2" id="Ogf-l4-Udl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Mkg-y7-74F" secondAttribute="trailing" id="Q2C-Ae-u5t"/>
+                                                    <constraint firstItem="jQX-9B-qy6" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="RgH-G9-9P6"/>
+                                                    <constraint firstItem="bl7-79-fTj" firstAttribute="top" secondItem="OAz-Oa-UE1" secondAttribute="bottom" constant="15" id="T0j-QQ-DyR"/>
+                                                    <constraint firstItem="QQX-BI-Ir0" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="TaI-Mq-oiM"/>
+                                                    <constraint firstItem="bxc-aR-2Fu" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" constant="-33" id="TiN-Kl-2hs"/>
+                                                    <constraint firstItem="Qhk-ds-ca4" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="UZP-Yl-4TL"/>
+                                                    <constraint firstItem="sAQ-TT-e1B" firstAttribute="top" secondItem="Qhk-ds-ca4" secondAttribute="bottom" constant="2" id="X9f-ng-Qk9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bl7-79-fTj" secondAttribute="trailing" id="XZW-Pb-lN2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jQX-9B-qy6" secondAttribute="trailing" id="dZU-PX-XOe"/>
+                                                    <constraint firstItem="lyf-yn-yUY" firstAttribute="top" secondItem="bxc-aR-2Fu" secondAttribute="bottom" constant="10" id="eTL-3Q-7ju"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Qhk-ds-ca4" secondAttribute="trailing" id="efK-UT-u38"/>
+                                                    <constraint firstItem="bxc-aR-2Fu" firstAttribute="top" secondItem="bl7-79-fTj" secondAttribute="bottom" constant="2" id="mWc-BG-lGv"/>
+                                                    <constraint firstItem="Mkg-y7-74F" firstAttribute="leading" secondItem="hMA-xa-tDs" secondAttribute="leading" id="oI1-xg-r8U"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sAQ-TT-e1B" secondAttribute="trailing" constant="-33" id="pX5-jI-BuT"/>
+                                                    <constraint firstItem="QQX-BI-Ir0" firstAttribute="top" secondItem="jQX-9B-qy6" secondAttribute="bottom" constant="2" id="r7c-6H-pBX"/>
+                                                    <constraint firstItem="OAz-Oa-UE1" firstAttribute="top" secondItem="Mkg-y7-74F" secondAttribute="bottom" constant="2" id="uW6-uM-H8m"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="FvX-Pd-9mx"/>
+                                                        <exclude reference="r7c-6H-pBX"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="jbd-FV-gSY" firstAttribute="top" secondItem="hMA-xa-tDs" secondAttribute="bottom" constant="10" id="1xU-vs-jIl"/>
                                             <constraint firstAttribute="bottom" secondItem="8Be-I8-Sfh" secondAttribute="bottom" id="APl-K5-JbE"/>
+                                            <constraint firstItem="hMA-xa-tDs" firstAttribute="top" secondItem="NUh-1b-ToJ" secondAttribute="bottom" constant="20" id="CYs-x9-QbY"/>
+                                            <constraint firstAttribute="trailing" secondItem="hMA-xa-tDs" secondAttribute="trailing" constant="20" id="HAq-ZF-xxP"/>
                                             <constraint firstItem="Wva-wo-qK1" firstAttribute="top" secondItem="HIa-dF-5Ez" secondAttribute="top" id="OXi-Fz-3MR"/>
                                             <constraint firstItem="hMv-35-Abi" firstAttribute="centerX" secondItem="HIa-dF-5Ez" secondAttribute="centerX" id="ZMN-5Z-LqD"/>
+                                            <constraint firstItem="hMA-xa-tDs" firstAttribute="leading" secondItem="HIa-dF-5Ez" secondAttribute="leading" constant="20" id="Zyh-wL-dlI"/>
                                             <constraint firstAttribute="trailing" secondItem="Wva-wo-qK1" secondAttribute="trailing" id="aJl-8S-tmQ"/>
                                             <constraint firstItem="hMv-35-Abi" firstAttribute="leading" secondItem="8Be-I8-Sfh" secondAttribute="trailing" id="fgx-wK-Rjg"/>
                                             <constraint firstItem="NUh-1b-ToJ" firstAttribute="top" secondItem="Wva-wo-qK1" secondAttribute="bottom" constant="20" id="kZT-Xi-QoZ"/>
@@ -2187,47 +2129,6 @@
             </objects>
             <point key="canvasLocation" x="785.5" y="533.5"/>
         </scene>
-        <!--ResultsFilter1-->
-        <scene sceneID="MZB-6V-rYJ">
-            <objects>
-                <viewController id="kmQ-bQ-7Ep" userLabel="ResultsFilter1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oFe-fa-1EC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hdt-ZW-385"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Gl-Jd-bOs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Results-by Category" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-sw-21z">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCg-3y-ER1">
-                                <rect key="frame" x="0.0" y="20" width="41" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="41" id="QHu-Ep-xL3"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="eqB-9g-H3u" kind="unwind" unwindAction="unwindToViewController:" id="9qa-XB-pKz"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gCg-3y-ER1" firstAttribute="leading" secondItem="f2p-sw-21z" secondAttribute="leading" id="7Ne-5P-2mq"/>
-                            <constraint firstItem="gCg-3y-ER1" firstAttribute="top" secondItem="oFe-fa-1EC" secondAttribute="bottom" id="LVQ-Ta-02K"/>
-                            <constraint firstItem="f2p-sw-21z" firstAttribute="bottom" secondItem="Hdt-ZW-385" secondAttribute="top" id="ShM-5s-4IV"/>
-                            <constraint firstItem="gCg-3y-ER1" firstAttribute="leading" secondItem="0Gl-Jd-bOs" secondAttribute="leading" id="aRN-Kg-IMR"/>
-                            <constraint firstItem="Hdt-ZW-385" firstAttribute="top" secondItem="gCg-3y-ER1" secondAttribute="bottom" constant="602" id="eUF-yw-LnY"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pKU-Wt-tmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="eqB-9g-H3u" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1231.5" y="533.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Add44" width="44" height="44"/>
@@ -2250,18 +2151,12 @@
         <image name="MenuWhite44" width="44" height="44"/>
         <image name="Profile44" width="44" height="44"/>
         <image name="ProfileScreen" width="375" height="667"/>
-        <image name="QQ_icon" width="55" height="54"/>
         <image name="QuickQ44" width="44" height="44"/>
         <image name="Recent Polls" width="375" height="667"/>
-        <image name="Results-by Category" width="375" height="667"/>
         <image name="avatar" width="120" height="120"/>
         <image name="background1" width="375" height="667"/>
         <image name="background2" width="375" height="667"/>
         <image name="background4" width="375" height="667"/>
-        <image name="socialButtonFB" width="309" height="48"/>
-        <image name="socialButtonGL" width="309" height="48"/>
-        <image name="socialButtonLI" width="309" height="48"/>
-        <image name="socialButtonTwt" width="309" height="48"/>
         <image name="tabIconExplore" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

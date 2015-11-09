@@ -16,13 +16,12 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var ResultsButton: UIButton!
     @IBOutlet weak var AgeButton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
+    
+    //Results type buttons on bottom
     func GenderButtonDidTouch(sender: UIButton) {
         sender.selected = !sender.selected
         ResultsButton.selected = false
@@ -30,7 +29,6 @@ class ResultsViewController: UIViewController {
         ResultsView.hidden = true
         ResultsGenderView.hidden = false
     }
-    
     func ResultsButtonDidTouch(sender: UIButton) {
         sender.selected = !sender.selected
         GenderButton.selected = false
@@ -38,29 +36,9 @@ class ResultsViewController: UIViewController {
         ResultsView.hidden = false
         ResultsGenderView.hidden = true
     }
-
-    
     func AgeButtonDidTouch(sender: UIButton) {
         sender.selected = !sender.selected
     }
     
-
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
