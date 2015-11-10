@@ -64,7 +64,6 @@ class ExploreViewController: UIViewController {
         Answer2Button.selected = false
         Answer4Button.selected = false
         SubmitAnswerButton.hidden = false
-
     }
     
     @IBAction func Answer4DidTouch(sender: UIButton) {
