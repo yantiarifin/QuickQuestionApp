@@ -19,6 +19,7 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var SubmitAnswerButton: DesignableButton!
 
 //Answer options
+    var Answer:[String] = []
     @IBOutlet weak var Answer1Button: DesignableButton!
     @IBOutlet weak var Answer2Button: DesignableButton!
     @IBOutlet weak var Answer3Button: DesignableButton!
@@ -36,10 +37,6 @@ class ExploreViewController: UIViewController {
         Answer1Button.animation = "fadeIn"
         Answer1Button.curve = "easeOut"
         Answer1Button.animate()
-        Answer2Button.selected = false
-        Answer3Button.selected = false
-        Answer4Button.selected = false
-        SubmitAnswerButton.hidden = false
 
     }
     
@@ -93,4 +90,9 @@ class ExploreViewController: UIViewController {
             self.FaveAlertView.alpha = 0.0
             }, completion: nil)
     }
+    
+    @IBAction func reportButton(sender: UIButton) {
+    
+    }
+    
 }
